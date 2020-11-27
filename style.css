@@ -1,0 +1,271 @@
+body {
+    background-color: rgb(247, 247, 247);
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav .icon {
+    width: auto;
+    height: auto;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 5px;
+}
+
+/* Search button */
+
+nav button {
+    background: none;
+    border: none;
+    color: black;
+    height: 50px;
+    margin-top: 28px;
+}
+
+nav button:hover {
+    cursor: pointer;
+}
+
+nav button:focus {
+    outline: none;
+}
+
+nav button img {
+    margin-left: 15px;
+    height: 25px;
+    width: 25px;
+}
+
+.btn::before {
+    content: "Search";
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0;
+}
+
+/* Search input */
+
+.search_box {
+    border: none;
+    height: 30px;
+    width: 100%;
+    max-width: 650px;
+    padding: 8px 3px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 30px 5px 0 5px;
+}
+
+.search_box:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+/* ---- Recent ---- */
+
+.recent h1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.scroll-box {
+    height: 400px;
+    width: auto;
+    margin: 0 30px;
+    padding: 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 25px;
+}
+
+.scroll-box::-webkit-scrollbar {
+    background-color: #F5F5F5;
+    height: 11px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background-color: #e2e2e2;
+    border-radius: 25px;
+}
+
+.movie-box {
+    height: 350px;
+    width: 200px;
+    margin: 4px;
+    display: inline-block;
+    opacity: 0.8;
+    transition: 0.7s;
+    border-radius: 25px;
+}
+
+.movie-box:hover {
+    opacity: 1;
+    box-shadow: 0px 13px 27px -15px #000000;
+    margin: 15px;
+}
+
+.movie-box_poster {
+    height: 300px;
+    width: 200px;
+    background-color: tomato;
+    border-radius: 25px;
+}
+
+.movie-box_title {
+    margin: 4px 4px 4px 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.movie-box_year {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.movie-box_genres {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 5px 0 0 10px;
+}
+
+.testing-class01 {
+    background-color: thistle;
+}
+
+.testing-class02 {
+    background-color: rgb(75, 5, 75);
+}
+
+.testing-class03 {
+    background-color: rgb(61, 45, 207);
+}
+
+.testing-class04 {
+    background-color: rgb(5, 1, 44);
+}
+
+.testing-class05 {
+    background-color: rgb(45, 207, 58);
+}
+
+.testing-class06 {
+    background-color: rgb(236, 203, 13);
+}
+
+/* ---- Other Movies ---- */
+
+.other-movies {
+    display: flex;
+    height: 400px;
+    width: auto;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.other-movies::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 25px;
+}
+
+.other-movies::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff;
+}
+
+.other-movies::-webkit-scrollbar-thumb {
+    background-color: #e2e2e2;
+    border-radius: 25px;
+}
+
+.other-movies_box {
+    width: 120px;
+    height: 200px;
+    margin: 6px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+@media(max-width: 650px) {
+    /* ---- Nav ---- */
+    nav .icon {
+        margin-top: 25px;
+        max-width: 45px;
+        max-height: 45px;
+    }
+    .btn::before {
+        content: ""
+    }
+    .search_box {
+        width: 100%;
+        max-width: 400px;
+    }
+    /* ---- Recent ---- */
+    .recent {
+        max-width: 650px;
+    }
+    .scroll-box {
+        margin: 5px;
+        max-width: 650px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .scroll-box::-webkit-scrollbar {
+        display: none;
+    }
+    .movie-box {
+        margin: 5px;
+    }
+    /* ---- Other Movies ---- */
+    .other-movies {
+        display: block;
+        max-width: 620px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 10px;
+        margin-bottom: 30px;
+        height: auto;
+        white-space: nowrap;
+    }
+    .other-movies_box {
+        display: inline-block;
+    }
+    .other-movies::-webkit-scrollbar-track {
+        background-color: #d1d1d1;
+    }
+    .other-movies::-webkit-scrollbar-thumb {
+        background-color: #ffffff;
+        min-width: 60px;
+    }
+    .other-movies::-webkit-scrollbar {
+        background-color: #d1d1d1;
+        border-radius: 25px;
+    }
+}
+
+@media(min-height: 1100px) {
+    .other-movies {
+        height: auto;
+        overflow-y: hidden;
+    }
+}
