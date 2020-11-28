@@ -115,6 +115,66 @@ nav button img {
     border-radius: 25px;
 }
 
+.test {
+    width: 120px;
+    height: 100px;
+    position: relative;
+    top: 200px;
+    left: 20px;
+    display: none;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+.movie-box:hover .test {
+    display: block;
+    transition: 0.1s;
+}
+
+.test img {
+    height: 20px;
+    width: 20px;
+}
+
+.test button {
+    width: 160px;
+    height: 30px;
+    border: none;
+    background-color: rgb(243, 243, 243);
+    opacity: 0.5;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.test button:hover {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.test button:focus {
+    outline: none;
+}
+
+
+
+
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .movie-box:hover {
     opacity: 1;
     box-shadow: 0px 13px 27px -15px #000000;
@@ -269,3 +329,7 @@ nav button img {
         overflow-y: hidden;
     }
 }
+
+
+
+
